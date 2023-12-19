@@ -13,6 +13,6 @@ For general inquiries and support-related issues, you can contact us at <support
 
 ## Submit a Support Ticket
 
-To ensure a prompt and organized response to your query, we encourage you to submit a support ticket through our [online ticketing system](https://example.com).
+To ensure a prompt and organized response to your query, we encourage you to submit a support ticket through our [online ticketing system](https://example.com). 
 
 Our support team will get back to you as soon as possible.
