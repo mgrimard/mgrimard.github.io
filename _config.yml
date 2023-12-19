@@ -28,7 +28,7 @@ permalink: pretty
 logo: "/assets/images/Ez-Stak-Logo.png"
 favicon_ico: "/assets/images/favicon.png"
 # Build settings
-theme: just-the-docs
+remote_theme: just-the-docs
 plugins:
   - jekyll-feed
 
