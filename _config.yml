@@ -24,8 +24,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   EZ STAK documentation site.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: pretty
 logo: "/assets/images/Ez-Stak-Logo.png"
-
+favicon_ico: "/assets/images/favicon.png"
 # Build settings
 theme: just-the-docs
 plugins:
@@ -39,16 +40,79 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
 color_scheme: ezstak
+
+# Collections
+collections:
+  ezstak-documentation:
+    output: true
+    sort_by: nav_order
+  ticketing-system:
+    output: true
+    sort_by: nav_order
+  o365:
+    output: true
+    sort_by: nav_order
+
+collections_dir: documentation
+
+defaults:
+  - scope:
+      path: "**/*.md"
+      type: "ezstak-documentation"
+    values:
+      layout: "page"
+  - scope:
+      path: "**/*.md"
+      type: "ticketing-system"
+    values:
+      layout: "page"
+  - scope:
+      path: "**/*.md"
+      type: "o365"
+    values:
+      layout: "page"
+
+just_the_docs:
+  # Define which collections are used in just-the-docs
+  collections:
+    ezstak-documentation:
+      name: EZ STAK Documentation
+      nav_exclude: false
+      search_exclude: false
+    ticketing-system:
+      name: EZ STAK Ticketing System
+      nav_exclude: false
+      search_exclude: false
+    o365:
+      name: Office 365
+      nav_exclude: false
+      search_exclude: false
+
+callouts:
+  warning:
+    title: Warning
+    color: red
+  note:
+    title: Note
+    color: purple
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: new
+    color: green
